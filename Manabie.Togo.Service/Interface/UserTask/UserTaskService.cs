@@ -27,8 +27,6 @@ namespace Manabie.Togo.Service.Interface.UserTask
 
 		public async Task<CreateUserTaskResponse> Create(UserTaskDto item)
 		{
-			_userTaskRepositoryRedis.ClearAll();
-
 			var userTaskEntity = _mapper.Map<UserTaskDto, UserTaskEntity>(item);
 			userTaskEntity.ID = Guid.NewGuid();
 

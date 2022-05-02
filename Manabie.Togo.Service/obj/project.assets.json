@@ -1048,11 +1048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Others-Git\\Manabie\\Manabie.Togo.Service\\Manabie.Togo.Service.csproj",
+      "projectUniqueName": "D:\\Others-Git\\togo\\Manabie.Togo.Service\\Manabie.Togo.Service.csproj",
       "projectName": "Manabie.Togo.Service",
-      "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Service\\Manabie.Togo.Service.csproj",
+      "projectPath": "D:\\Others-Git\\togo\\Manabie.Togo.Service\\Manabie.Togo.Service.csproj",
       "packagesPath": "C:\\Users\\mrphu\\.nuget\\packages\\",
-      "outputPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Service\\obj\\",
+      "outputPath": "D:\\Others-Git\\togo\\Manabie.Togo.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1072,8 +1072,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj": {
-              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj"
+            "D:\\Others-Git\\togo\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj": {
+              "projectPath": "D:\\Others-Git\\togo\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj"
             }
           }
         }

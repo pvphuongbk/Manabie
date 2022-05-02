@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B7V/Msz8yZThi8GQQc33dnjD64DtgHHelxGhWVuEu/RpkN1syzpd8ttaRnIkvWEdbdftjBAvGCAHvglzUgVLTw==",
+  "dgSpecHash": "n2SzdHw1WTICyzQ67/Kh2vkWBqvb8k9/f59UtndwYLVahR6jHK0GyHGZbtGvi6EFfPYk6OotaRBbU4C98cA52Q==",
   "success": true,
-  "projectFilePath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Api\\Manabie.Togo.Api.csproj",
+  "projectFilePath": "D:\\Others-Git\\togo\\Manabie.Togo.Api\\Manabie.Togo.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrphu\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\mrphu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Manabie.Togo.Service
-build_property.ProjectDir = D:\Others-Git\Manabie\Manabie.Togo.Service\
+build_property.ProjectDir = D:\Others-Git\togo\Manabie.Togo.Service\

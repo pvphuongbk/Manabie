@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj",
+      "projectUniqueName": "D:\\Others-Git\\togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj",
       "projectName": "Manabie.Togo.Data",
-      "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj",
+      "projectPath": "D:\\Others-Git\\togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj",
       "packagesPath": "C:\\Users\\mrphu\\.nuget\\packages\\",
-      "outputPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\obj\\",
+      "outputPath": "D:\\Others-Git\\togo\\Manabie.Togo.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
