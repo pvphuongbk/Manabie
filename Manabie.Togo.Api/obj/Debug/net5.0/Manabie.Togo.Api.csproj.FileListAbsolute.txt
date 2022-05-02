@@ -244,3 +244,4 @@ D:\Others-Git\togo\Manabie.Togo.Api\obj\Debug\net5.0\Manabie.Togo.Api.dll
 D:\Others-Git\togo\Manabie.Togo.Api\obj\Debug\net5.0\ref\Manabie.Togo.Api.dll
 D:\Others-Git\togo\Manabie.Togo.Api\obj\Debug\net5.0\Manabie.Togo.Api.pdb
 D:\Others-Git\togo\Manabie.Togo.Api\obj\Debug\net5.0\Manabie.Togo.Api.genruntimeconfig.cache
+D:\Others-Git\togo\Manabie.Togo.Api\bin\Debug\net5.0\JsonFiles\UserTaskEntity.json
