@@ -4,6 +4,8 @@ using Manabie.Togo.Core.Bus;
 using Manabie.Togo.Data.Dto;
 using Manabie.Togo.Data.Entity;
 using Manabie.Togo.Domain.Commands.UserTask.Create;
+using Manabie.Togo.Domain.Commands.UserTask.GetByDay;
+using Manabie.Togo.Domain.Events.UserTask.Create;
 using Manabie.Togo.RedisRepository.Interface;
 using Manabie.Togo.Service.Implememt.UserTask;
 using System;
@@ -25,21 +27,28 @@ namespace Manabie.Togo.Service.Interface.UserTask
 
 		public async Task<CreateUserTaskResponse> Create(UserTaskDto item)
 		{
+			_userTaskRepositoryRedis.ClearAll();
+
 			var userTaskEntity = _mapper.Map<UserTaskDto, UserTaskEntity>(item);
+			userTaskEntity.ID = Guid.NewGuid();
+
+			// Insert db
 			var createCommand = new CreatedUserTaskCommand { UserTaskEntity = userTaskEntity };
 			var result = await _bus.SendCommand<CreatedUserTaskCommand, CreateUserTaskResponse>(createCommand);
+
+			// Insert db success => insert into redis
+			if (result.Code == 0)
+			{
+				var eventObj = new CreatedUserTaskEvent { UserTaskEntity = userTaskEntity };
+				await _bus.RaiseEvent(eventObj);
+			}
 			return result;
 		}
 
-		public async Task<ResponseBase> GetAllTaskByDay(Guid userId, DateTime taskDate)
+		public async Task<ResponseBase> GetAllTaskByDay(GetUserTaskDto  getUserTaskDto)
 		{
-			var dataAsync = Task.Run(delegate ()
-			{
-				ResponseBase response = new ResponseBase();
-				response.Data = _userTaskRepositoryRedis.GetAllByDay(userId, taskDate);
-				return response;
-			});
-			var result = await dataAsync;
+			var command = new GetByDayUserTaskCommand { GetUserTaskDto = getUserTaskDto };
+			var result = await _bus.SendCommand<GetByDayUserTaskCommand, GetByDayUserTaskResponse>(command);
 			return result;
 		}
 	}

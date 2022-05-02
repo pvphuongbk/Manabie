@@ -64,17 +64,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrphu\\.nuget\\packages\\": {}
+    "C:\\Users\\mrphu\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj",
+      "projectUniqueName": "D:\\Others-Git\\Manabie\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj",
       "projectName": "Manabie.Togo.JsonRepository",
-      "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj",
+      "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj",
       "packagesPath": "C:\\Users\\mrphu\\.nuget\\packages\\",
-      "outputPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.JsonRepository\\obj\\",
+      "outputPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.JsonRepository\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\mrphu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -90,8 +94,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj": {
-              "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj"
+            "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj": {
+              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj"
             }
           }
         }
@@ -126,7 +130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

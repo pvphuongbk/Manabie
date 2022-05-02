@@ -14,7 +14,7 @@ namespace Manabie.Togo.RedisRepository.Implememt
 
         public override async Task SaveAsync(UserTaskEntity item)
         {
-            var key = MakeUserTaskKey(item.UserId, item.TaskDate);
+            var key = MakeUserTaskKey(item.UserId, item.TaskDate, item.ID);
             await SaveByKeyAsync(key, item);
         }
 
@@ -26,7 +26,12 @@ namespace Manabie.Togo.RedisRepository.Implememt
 
         private string MakeUserTaskKey(Guid userId, DateTime taskDate)
         {
-            return $"{userId}:{taskDate.ToString("dd-MM-yyyy")}";
+            return $"{_namespace}:{userId}:{taskDate.ToString("dd-MM-yyyy")}";
         }
-    }
+
+        private string MakeUserTaskKey(Guid userId, DateTime taskDate, Guid id)
+        {
+            return $"{_namespace}:{userId}:{taskDate.ToString("dd-MM-yyyy")}:{id}";
+        }
+	}
 }

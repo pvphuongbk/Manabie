@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Manabie.Togo.Data.Base
 {
-    public class BaseData
+    public class BaseDto
     {
-        public Guid ID { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? CreatedDate { get; set; }
         public Guid? CreatedBy { get; set; }

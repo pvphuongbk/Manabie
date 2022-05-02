@@ -3,7 +3,7 @@ using System;
 
 namespace Manabie.Togo.Data.Entity
 {
-    public class UserTaskEntity : BaseData
+    public class UserTaskEntity : BaseEntity
     {
         public Guid UserId { get; set; }
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Manabie.Togo.JsonRepository.Base
 {
-	public class JsonBase<T> : IJsonBase<T> where T : BaseData
+	public class JsonBase<T> : IJsonBase<T> where T : BaseEntity
 	{
 		private ConcurrentDictionary<Guid, T> _dicData;
 		private string _fullpath;
@@ -36,6 +36,10 @@ namespace Manabie.Togo.JsonRepository.Base
 					// Data empty
 					if (!File.Exists(_fullpath))
 					{
+						if (!Directory.Exists(Path.GetDirectoryName(_fullpath)))
+							Directory.CreateDirectory(Path.GetDirectoryName(_fullpath));
+						System.IO.FileStream f = System.IO.File.Create(_fullpath);
+						f.Close();
 						return new ConcurrentDictionary<Guid, T>();
 					}
 					string jsonText;
@@ -46,6 +50,8 @@ namespace Manabie.Togo.JsonRepository.Base
 					}
 
 					var datas = JsonConvert.DeserializeObject<ConcurrentDictionary<Guid, T>>(jsonText);
+					if (datas == null)
+						return new ConcurrentDictionary<Guid, T>();
 					return datas;
 				}
 			}
@@ -137,22 +143,22 @@ namespace Manabie.Togo.JsonRepository.Base
 		/// Save all change
 		/// </summary>
 		/// <returns></returns>
-		public bool SaveChange()
+		public async Task<bool> SaveChange()
 		{
 			try
 			{
-				lock (_dicData)
+				var dataAsync = Task.Run(delegate ()
 				{
 					//open file stream
-					using (StreamWriter file = File.CreateText(_fullpath))
+					using (StreamWriter sw = new StreamWriter(_fullpath, true))
 					{
 						JsonSerializer serializer = new JsonSerializer();
 						//serialize object directly into file stream
-						serializer.Serialize(file, _dicData);
+						serializer.Serialize(sw, _dicData);
 					}
-				}
-
-				return true;
+					return true;
+				});
+				return await dataAsync;
 			}
 			catch (Exception ex)
 			{

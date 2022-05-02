@@ -1,9 +1,11 @@
 ﻿using Manabie.Togo.Data.Base;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace Manabie.Togo.JsonRepository.Base
 {
-	public interface IJsonBase<T> where T : BaseData
+	public interface IJsonBase<T> where T : BaseEntity
 	{
 		/// <summary>
 		/// Get all datas
@@ -50,6 +52,6 @@ namespace Manabie.Togo.JsonRepository.Base
 		/// Save all change
 		/// </summary>
 		/// <returns></returns>
-		bool SaveChange();
+		Task<bool> SaveChange();
 	}
 }

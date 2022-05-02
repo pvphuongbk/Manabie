@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lwvb8xPn6SzKtmMqemoV9yBnCrVpbx4R7tjdRwwn63SDaHbiSgugmx5bGTN79yWV8K8gY5eIAzq00GHhRT9Q5Q==",
+  "dgSpecHash": "4YQHfMA8BfMa7yWXEe6qJMSHoFhwGGmHFHDZnRW5wEubhkEJqQRQIuNb5Q+ysoZJZt6ipn0nrgnD2kgbEGQ6fg==",
   "success": true,
-  "projectFilePath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
+  "projectFilePath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrphu\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\mrphu\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",

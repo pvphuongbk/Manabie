@@ -17,16 +17,15 @@ namespace Manabie.Togo.Api.Controllers
             _userTaskService = userTaskService;
         }
 
-        [HttpPost]
-        public async Task<ResponseBase> GetByDay([FromBody] GetUserTaskDto getUserTaskDto)
+        [HttpPost("tasks-by-day")]
+        public async Task<ResponseBase> GetAllTaskByDay([FromBody] GetUserTaskDto getUserTaskDto)
         {
-            var users = await _userTaskService.GetAllTaskByDay(getUserTaskDto.UserId, getUserTaskDto.TaskDate);
-
+            var users = await _userTaskService.GetAllTaskByDay(getUserTaskDto);
             return users;
         }
 
-        [HttpPost]
-        public async Task<CreateUserTaskResponse> InsertUserTask([FromBody] UserTaskDto userTaskDto)
+        [HttpPost("insert")]
+        public async Task<CreateUserTaskResponse> Create([FromBody] UserTaskDto userTaskDto)
         {
             var users = await _userTaskService.Create(userTaskDto);
 

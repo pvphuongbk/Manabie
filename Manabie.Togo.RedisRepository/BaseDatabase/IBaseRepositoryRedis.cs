@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Manabie.Togo.RedisRepository.BaseDatabase
 {
-    public interface IBaseRepositoryRedis<T> where T : BaseData
+    public interface IBaseRepositoryRedis<T> where T : BaseEntity
     {
         T GetByID(Guid id);
         Task<T> GetByIDAsync(Guid id);

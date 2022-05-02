@@ -28,3 +28,18 @@ D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Man
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.dll
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.RedisRepository\obj\Debug\net5.0\ref\Manabie.Togo.RedisRepository.dll
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.pdb
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\Manabie.Togo.RedisRepository.deps.json
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\Manabie.Togo.RedisRepository.dll
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\ref\Manabie.Togo.RedisRepository.dll
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\Manabie.Togo.RedisRepository.pdb
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\Manabie.Togo.Data.dll
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\bin\Debug\net5.0\Manabie.Togo.Data.pdb
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.csproj.AssemblyReference.cache
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.AssemblyInfoInputs.cache
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.AssemblyInfo.cs
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.csproj.CoreCompileInputs.cache
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.csproj.CopyComplete
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.dll
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\ref\Manabie.Togo.RedisRepository.dll
+D:\Others-Git\Manabie\Manabie.Togo.RedisRepository\obj\Debug\net5.0\Manabie.Togo.RedisRepository.pdb

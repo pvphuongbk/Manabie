@@ -22,3 +22,15 @@ D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.D
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.dll
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.Data\obj\Debug\net5.0\ref\Manabie.Togo.Data.dll
 D:\Cá nhân\togo\Manabie.Togo\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.pdb
+D:\Others-Git\Manabie\Manabie.Togo.Data\bin\Debug\net5.0\Manabie.Togo.Data.deps.json
+D:\Others-Git\Manabie\Manabie.Togo.Data\bin\Debug\net5.0\Manabie.Togo.Data.dll
+D:\Others-Git\Manabie\Manabie.Togo.Data\bin\Debug\net5.0\ref\Manabie.Togo.Data.dll
+D:\Others-Git\Manabie\Manabie.Togo.Data\bin\Debug\net5.0\Manabie.Togo.Data.pdb
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.csproj.AssemblyReference.cache
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.AssemblyInfoInputs.cache
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.AssemblyInfo.cs
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.csproj.CoreCompileInputs.cache
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.dll
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\ref\Manabie.Togo.Data.dll
+D:\Others-Git\Manabie\Manabie.Togo.Data\obj\Debug\net5.0\Manabie.Togo.Data.pdb

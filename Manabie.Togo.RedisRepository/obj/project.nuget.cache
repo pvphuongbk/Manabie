@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7E6GVFUU3Oce6ZDN6PEWasZd0H0mv9AUOvvzmvU6jwW7nE/w/YCdBykuDwR08tAP0AiotZe9v1N8iutP/7ySjQ==",
+  "dgSpecHash": "f4cj8tXupqXZ4kGKiARcxkP8lYiqAro4TqCJ4c9hftaryTalNNn3sObeT1/TZq3Sw4VKSNee3owYSnsXWTTIfQ==",
   "success": true,
-  "projectFilePath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj",
+  "projectFilePath": "D:\\Others-Git\\Manabie\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrphu\\.nuget\\packages\\mediabrowser.common\\4.7.0.30\\mediabrowser.common.4.7.0.30.nupkg.sha512",
     "C:\\Users\\mrphu\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

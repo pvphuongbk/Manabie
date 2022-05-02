@@ -1024,17 +1024,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mrphu\\.nuget\\packages\\": {}
+    "C:\\Users\\mrphu\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
+      "projectUniqueName": "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
       "projectName": "Manabie.Togo.Domain",
-      "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
+      "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\Manabie.Togo.Domain.csproj",
       "packagesPath": "C:\\Users\\mrphu\\.nuget\\packages\\",
-      "outputPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Domain\\obj\\",
+      "outputPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\mrphu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -1050,17 +1054,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Core\\Manabie.Togo.Core.csproj": {
-              "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Core\\Manabie.Togo.Core.csproj"
+            "D:\\Others-Git\\Manabie\\Manabie.Togo.Core\\Manabie.Togo.Core.csproj": {
+              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Core\\Manabie.Togo.Core.csproj"
             },
-            "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj": {
-              "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj"
+            "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj": {
+              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.Data\\Manabie.Togo.Data.csproj"
             },
-            "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj": {
-              "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj"
+            "D:\\Others-Git\\Manabie\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj": {
+              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.JsonRepository\\Manabie.Togo.JsonRepository.csproj"
             },
-            "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj": {
-              "projectPath": "D:\\Cá nhân\\togo\\Manabie.Togo\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj"
+            "D:\\Others-Git\\Manabie\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj": {
+              "projectPath": "D:\\Others-Git\\Manabie\\Manabie.Togo.RedisRepository\\Manabie.Togo.RedisRepository.csproj"
             }
           }
         }
@@ -1095,7 +1099,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

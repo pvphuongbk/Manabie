@@ -21,75 +21,76 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Manabie.Togo.Api
 {
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            _config = configuration;
-        }
+	public class Startup
+	{
+		public Startup(IConfiguration configuration)
+		{
+			_config = configuration;
+		}
 
-        private readonly IConfiguration _config;
+		private readonly IConfiguration _config;
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+		// This method gets called by the runtime. Use this method to add services to the container.
+		public void ConfigureServices(IServiceCollection services)
+		{
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Manabie.Togo.Api", Version = "v1" });
-            });
+			services.AddControllers();
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "Manabie.Togo.Api", Version = "v1" });
+			});
 
-            // Auto maper
-            services.AddCommonServices();
+			// Auto maper
+			services.AddCommonServices();
 
-            // Json reading file
-            services.AddScoped<IUserTaskJsonRepository, UserTaskJsonRepository>();
+			// Json reading file
+			services.AddSingleton<IUserTaskJsonRepository, UserTaskJsonRepository>();
 
-            // Mediator
-            services.AddMediatR(typeof(CreatedUserTaskCommand).GetTypeInfo().Assembly);
-            services.AddScoped<IMediatorHandler, InMemoryBus>();
+			// Mediator
+			services.AddMediatR(typeof(CreatedUserTaskCommand).GetTypeInfo().Assembly);
+			services.AddScoped<IMediatorHandler, InMemoryBus>();
 
-            // Service
-            services.AddScoped<IUserTaskService, UserTaskService>();
+			// Service
+			services.AddScoped<IUserTaskService, UserTaskService>();
 
-            // Redis Repository
-            services.AddScoped<IUserTaskRepositoryRedis, UserTaskRepositoryRedis>();
+			// Redis Repository
+			services.AddSingleton<IUserTaskRepositoryRedis, UserTaskRepositoryRedis>();
 
-            // Init Redis
-            string redisConnection = _config.GetSection("MyConfigs")["RedisConnection"];
-            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
-            services.AddSingleton<IDatabase>(sp =>
-            {
-                var con = sp.GetService<IConnectionMultiplexer>();
-                return con.GetDatabase();
-            });
-        }
+			// Init Redis
+			string redisConnection = _config.GetSection("MyConfigs")["RedisConnection"];
+			services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnection));
+			services.AddSingleton<IDatabase>(sp =>
+			{
+				var con = sp.GetService<IConnectionMultiplexer>();
+				return con.GetDatabase();
+			});
+		}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Manabie.Togo.Api v1"));
-            }
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+				app.UseSwagger();
+				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Manabie.Togo.Api v1"));
+			}
 
-            app.UseHttpsRedirection();
+			app.UseHttpsRedirection();
 
-            app.UseRouting();
+			app.UseRouting();
 
-            app.UseAuthorization();
+			app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-        }
-    }
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapControllers();
+			});
+		}
+	}
 }

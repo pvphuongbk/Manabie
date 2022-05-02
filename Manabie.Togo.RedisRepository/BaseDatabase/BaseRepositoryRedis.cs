@@ -4,12 +4,13 @@ using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Manabie.Togo.RedisRepository.BaseDatabase
 {
-    public class BaseRepositoryRedis<T> : IBaseRepositoryRedis<T> where T : BaseData
+    public class BaseRepositoryRedis<T> : IBaseRepositoryRedis<T> where T : BaseEntity
     {
         protected readonly IConnectionMultiplexer _redisConnection;
         protected readonly IDatabase _database;
@@ -17,7 +18,7 @@ namespace Manabie.Togo.RedisRepository.BaseDatabase
         /// <summary>
         /// The Namespace is the first part of any key created by this Repository, e.g. "tenant" or "company"
         /// </summary>
-        private readonly string _namespace;
+        protected readonly string _namespace;
 
         public BaseRepositoryRedis(IConnectionMultiplexer redisConnection, IDatabase database, string nameSpace)
         {
@@ -65,12 +66,22 @@ namespace Manabie.Togo.RedisRepository.BaseDatabase
 
         public async Task<IEnumerable<T>> GetAllBykeyAsync(string key)
         {
-            var serializedObject = await _database.StringGetAsync(key);
-            if (serializedObject.IsNullOrEmpty)
+            try
             {
+				var dbExc = _database.Execute($"KEYS", new string[1] { $"{key}:*" });
+				var keyR = (RedisKey[])dbExc;
+				var value = await _database.StringGetAsync(keyR);
+                if (value.Count() > 0)
+                {                 
+                    var result = value.Select(serializedObject=> JsonConvert.DeserializeObject<IEnumerable<T>>(serializedObject.ToString()));
+                    return result.SelectMany(x => x);
+                }
                 return new List<T>();
             }
-            return JsonConvert.DeserializeObject<List<T>>(serializedObject.ToString()) ?? new List<T>();
+            catch (Exception ex)
+			{
+                return new List<T>();
+			}            
         }
 
         public async Task<T> GetByIDAsync(Guid id)

@@ -17,11 +17,10 @@ namespace Manabie.Togo.Domain.Events.UserTask.Create
             _userTaskRepositoryRedis = userTaskRepositoryRedis;
         }
 
-        public Task Handle(CreatedUserTaskEvent notification, CancellationToken cancellationToken)
+        public async Task Handle(CreatedUserTaskEvent notification, CancellationToken cancellationToken)
         {
             // Save to redis
-            _userTaskRepositoryRedis.Save(notification.UserTaskEntity);
-            return Task.FromResult(true);
+            await _userTaskRepositoryRedis.SaveAsync(notification.UserTaskEntity);
         }
     }
 }

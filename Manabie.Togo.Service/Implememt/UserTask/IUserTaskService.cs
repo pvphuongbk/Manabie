@@ -11,6 +11,6 @@ namespace Manabie.Togo.Service.Implememt.UserTask
 	public interface IUserTaskService : IBaseService
 	{
 		Task<CreateUserTaskResponse> Create(UserTaskDto item);
-		Task<ResponseBase> GetAllTaskByDay(Guid userId, DateTime taskDate);
+		Task<ResponseBase> GetAllTaskByDay(GetUserTaskDto getUserTaskDto);
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Manabie.Togo.RedisRepository.BaseDatabase
 {
-    public class BaseDtoCompare<T> : IEqualityComparer<T> where T : BaseData
+    public class BaseDtoCompare<T> : IEqualityComparer<T> where T : BaseEntity
     {
         public bool Equals(T x, T y)
         {

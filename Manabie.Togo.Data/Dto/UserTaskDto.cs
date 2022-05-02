@@ -2,7 +2,7 @@
 using System;
 namespace Manabie.Togo.Data.Dto
 {
-    public class UserTaskDto : BaseData
+    public class UserTaskDto : BaseDto
     {
         public Guid UserId { get; set; }
 

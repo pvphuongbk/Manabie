@@ -38,19 +38,7 @@ namespace Manabie.Togo.Domain.Commands.UserTask.Create
 			try
 			{
 				_userTaskJsonRepository.Add(request.UserTaskEntity);
-				var result = _userTaskJsonRepository.SaveChange();
-
-				// Insert success => insert into redis
-				if (result)
-				{
-					var eventObj = new CreatedUserTaskEvent { UserTaskEntity = request.UserTaskEntity };
-					await _bus.RaiseEvent(eventObj);
-				}
-				else
-                {
-					response.Code = ErrorCodeMessage.IncorrectFunction.Key;
-					response.Message = ErrorCodeMessage.IncorrectFunction.Value;
-				}
+				var result = await _userTaskJsonRepository.SaveChange();
 			}
 			catch (Exception ex)
 			{
